@@ -13,8 +13,10 @@ public class Contract {
         public static final String COLUMN_NAME_ID = "id";
 
         public static final String COLUMN_NAME_DESCRIPTION = "description";
-        //add one more list
-        public static final String COLUMN_NAME_DONE= "done";
+
+
         public static final String COLUMN_NAME_DUE_DATE = "duedate";
+        public static final String COLUMN_NAME_DONE= "done";
+        public static final String COLUMN_NAME_CATEGORY="category";
     }
 }
