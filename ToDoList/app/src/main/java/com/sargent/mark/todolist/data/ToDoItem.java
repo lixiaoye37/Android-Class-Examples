@@ -7,10 +7,12 @@ package com.sargent.mark.todolist.data;
 public class ToDoItem {
     private String description;
     private String dueDate;
+    private int done;
 
-    public ToDoItem(String description, String dueDate) {
+    public ToDoItem(String description, String dueDate,int done) {
         this.description = description;
         this.dueDate = dueDate;
+        this.done=done;
     }
 
     public String getDescription() {
@@ -27,5 +29,13 @@ public class ToDoItem {
 
     public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
+    }
+    //seter getter for done
+    public int getDone() {
+        return done;
+    }
+
+    public void setDone(int done) {
+        this.done = done;
     }
 }

@@ -1,7 +1,7 @@
-#Mon Jul 10 13:05:52 PDT 2017
-base.0=/Users/mark/Desktop/AndroidClass/inclass/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1c41d78b6335b2d6cedf2ad8cbc37a7ea7f98c22
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/mark/Desktop/AndroidClass/inclass/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_248a94d252828eb83a606f0af078799be5f1c862/classes.dex
-base.1=/Users/mark/Desktop/AndroidClass/inclass/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_248a94d252828eb83a606f0af078799be5f1c862
-file.0=/Users/mark/Desktop/AndroidClass/inclass/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1c41d78b6335b2d6cedf2ad8cbc37a7ea7f98c22/classes.dex
+#Wed Jul 19 02:29:03 PDT 2017
+base.0=C\:\\Users\\Mark\\Desktop\\New folder\\Android-Class-Examples\\ToDoList\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ca471b0ab0938fb009f4d33834684bf94343e7a0
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Mark\\Desktop\\New folder\\Android-Class-Examples\\ToDoList\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_eef6d8683a30ae2380623d761ace4e4a4e2b81a2\\classes.dex
+base.1=C\:\\Users\\Mark\\Desktop\\New folder\\Android-Class-Examples\\ToDoList\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_eef6d8683a30ae2380623d761ace4e4a4e2b81a2
+file.0=C\:\\Users\\Mark\\Desktop\\New folder\\Android-Class-Examples\\ToDoList\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ca471b0ab0938fb009f4d33834684bf94343e7a0\\classes.dex
