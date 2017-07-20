@@ -7,7 +7,7 @@ package com.sargent.mark.todolist.data;
 public class ToDoItem {
     private String description;
     private String dueDate;
-    private Integer done;
+    private int done;
     private String category;
 
     public ToDoItem(String description, String dueDate,int done,String category) {

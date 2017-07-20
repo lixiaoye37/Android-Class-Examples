@@ -46,9 +46,10 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
     public int getItemCount() {
         return cursor.getCount();
     }
-
+//add checkbox listenner interface
     public interface ItemClickListener {
         void onItemClick(int pos, String description, String duedate,int done, String category,long id);
+        void checkBoxClicked(String description, String dueDate,int done,String category, long id);
     }
 
     public ToDoListAdapter(Cursor cursor, ItemClickListener listener) {
@@ -72,7 +73,7 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
         TextView categoryT;
         String description;
         CheckBox checkBox;
-        int done;
+        int done = 0;
         String category;
         long id;
 
@@ -83,6 +84,7 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             due = (TextView) view.findViewById(R.id.dueDate);
             checkBox=(CheckBox) view.findViewById(R.id.checkbox);
             categoryT = (TextView) view.findViewById(R.id.category1);
+            //make it buautiful
             categoryT.setTextColor(0xff0000ff);
             due.setTextColor(0xffff0000);
             descr.setTextColor(0xff000000);
@@ -101,12 +103,30 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             done = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_DONE));
             category = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_CATEGORY));
 
+//implement checkbox listenner when check mark done =1,no check mark done=0
 
-
+            checkBox.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    //set done to 1 or 0 if its checked or not and pass into the item listener
+                    if(checkBox.isChecked()){
+                        done = 1 ;
+                    } else {
+                        done = 0;
+                    }
+                    listener.checkBoxClicked(description,duedate,done,category,id);
+                }
+            });
             descr.setText(description);
             due.setText(duedate);
             categoryT.setText(category);
             holder.itemView.setTag(id);
+            if(done==1){
+                checkBox.setChecked(true);
+            }
+            else{
+                checkBox.setChecked(false);
+            }
         }
 
         @Override
@@ -114,7 +134,7 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             int pos = getAdapterPosition();
             listener.onItemClick(pos, description, duedate,done,category, id);
         }
-//
+
     }
 
 }

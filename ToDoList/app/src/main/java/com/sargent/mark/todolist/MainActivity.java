@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
 
         adapter = new ToDoListAdapter(cursor, new ToDoListAdapter.ItemClickListener() {
 
+
             @Override
             public void onItemClick(int pos, String description, String duedate,int done,String category, long id) {
                 Log.d(TAG, "item click id: " + id);
@@ -79,8 +80,19 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
 
                 FragmentManager fm = getSupportFragmentManager();
 
-                UpdateToDoFragment frag = UpdateToDoFragment.newInstance(year, month, day, description,0,category, id);
+                UpdateToDoFragment frag = UpdateToDoFragment.newInstance(year, month, day, description,done,category, id);
                 frag.show(fm, "updatetodofragment");
+            }
+            //update table after checkbox clicked
+            @Override
+            public void checkBoxClicked(String description, String dueDate, int done, String category, long id) {
+                ContentValues cv = new ContentValues();
+
+                cv.put(Contract.TABLE_TODO.COLUMN_NAME_DESCRIPTION, description);
+                cv.put(Contract.TABLE_TODO.COLUMN_NAME_DUE_DATE, dueDate);
+                cv.put(Contract.TABLE_TODO.COLUMN_NAME_DONE,done);
+                cv.put(Contract.TABLE_TODO.COLUMN_NAME_CATEGORY,category);
+                db.update(Contract.TABLE_TODO.TABLE_NAME, cv, Contract.TABLE_TODO._ID + "=" + id, null);
             }
         });
 
@@ -173,14 +185,6 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
 
     @Override
     public void closeUpdateDialog(int year, int month, int day, String description,int done ,String category,long id) {
-       //check if the box being checked if yes 1,if not 0
-        CheckBox checkbox = (CheckBox) findViewById(R.id.checkbox);
-        if(checkbox.isChecked()){
-            done=1;
-        }
-        else{
-            done=0;
-        }
         updateToDo(db, year, month, day, description,done,category,id);
         adapter.swapCursor(getAllItems(db));
     }

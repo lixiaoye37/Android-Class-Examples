@@ -44,12 +44,7 @@ public class AddToDoFragment extends DialogFragment{
         //create spiner for category
         category1 = (Spinner) view.findViewById(R.id.category);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.choose_categories, android.R.layout.simple_spinner_item);
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-
-
-
         category1.setAdapter(adapter);
 
 
