@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+//create sub menu
+    <item
+        android:title="All"
+        android:id="@+id/category_all"
+        android:orderInCategory="1"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:title="Homework"
+        android:id="@+id/category_homework"
+        android:orderInCategory="2"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:title="Lab"
+        android:id="@+id/category_lab"
+        android:orderInCategory="3"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:title="Lecture"
+        android:id="@+id/category_lecture"
+        android:orderInCategory="4"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:title="Exsersise"
+        android:id="@+id/category_exsersise"
+        android:orderInCategory="5"
+        app:showAsAction="collapseActionView"
+        />
+
+
+
+</menu>

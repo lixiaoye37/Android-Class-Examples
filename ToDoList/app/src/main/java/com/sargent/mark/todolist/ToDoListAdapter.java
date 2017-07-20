@@ -2,6 +2,7 @@ package com.sargent.mark.todolist;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -82,6 +83,9 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             due = (TextView) view.findViewById(R.id.dueDate);
             checkBox=(CheckBox) view.findViewById(R.id.checkbox);
             categoryT = (TextView) view.findViewById(R.id.category1);
+            categoryT.setTextColor(0xff0000ff);
+            due.setTextColor(0xffff0000);
+            descr.setTextColor(0xff000000);
 
 
             view.setOnClickListener(this);
@@ -98,12 +102,7 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             category = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_CATEGORY));
 
 
-            //check if checked
-//            if(done==1){
-//                checkBox.setChecked(true);
-//            }else{
-//                checkBox.setChecked(false);
-//            }
+
             descr.setText(description);
             due.setText(duedate);
             categoryT.setText(category);
@@ -115,12 +114,7 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             int pos = getAdapterPosition();
             listener.onItemClick(pos, description, duedate,done,category, id);
         }
-//        public void ifDone(View v){
-//            CheckBox checkBox=(CheckBox)v;
-//            if(checkBox.isChecked()){
-//                done=1;
-//            }
-//        }
+//
     }
 
 }

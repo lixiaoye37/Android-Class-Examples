@@ -3077,6 +3077,11 @@ containing a value of this type.
         public static final int cancel_action=0x7f0e0091;
         public static final int category=0x7f0e0088;
         public static final int category1=0x7f0e008c;
+        public static final int category_all=0x7f0e00a6;
+        public static final int category_exsersise=0x7f0e00aa;
+        public static final int category_homework=0x7f0e00a7;
+        public static final int category_lab=0x7f0e00a8;
+        public static final int category_lecture=0x7f0e00a9;
         public static final int center=0x7f0e002e;
         public static final int center_horizontal=0x7f0e002f;
         public static final int center_vertical=0x7f0e0030;
@@ -3286,6 +3291,9 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f04003c;
         public static final int select_dialog_singlechoice_material=0x7f04003d;
         public static final int support_simple_spinner_dropdown_item=0x7f04003e;
+    }
+    public static final class menu {
+        public static final int category=0x7f0f0000;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

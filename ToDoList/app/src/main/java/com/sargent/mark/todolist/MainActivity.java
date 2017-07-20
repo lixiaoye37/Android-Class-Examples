@@ -12,6 +12,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
 
                 FragmentManager fm = getSupportFragmentManager();
 
-                UpdateToDoFragment frag = UpdateToDoFragment.newInstance(year, month, day, description,done,category, id);
+                UpdateToDoFragment frag = UpdateToDoFragment.newInstance(year, month, day, description,0,category, id);
                 frag.show(fm, "updatetodofragment");
             }
         });
@@ -119,6 +121,18 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
                 Contract.TABLE_TODO.TABLE_NAME,
                 null,
                 null,
+                null,
+                null,
+                null,
+                Contract.TABLE_TODO.COLUMN_NAME_DUE_DATE
+        );
+    }
+    //the query to get part of the data based on category
+    private Cursor getItem(SQLiteDatabase db, String category){
+
+        return db.query(Contract.TABLE_TODO.TABLE_NAME,
+                null,
+                "category = '" + category + "'",
                 null,
                 null,
                 null,
@@ -170,5 +184,41 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
         updateToDo(db, year, month, day, description,done,category,id);
         adapter.swapCursor(getAllItems(db));
     }
+
+    @Override
+//creat menu
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.category, menu);
+
+        return true;
+
+    }
+//check the number on each menu to figuralout the user's choice
+    public boolean onOptionsItemSelected(MenuItem menu) {
+
+        int choice = menu.getItemId();
+
+        if( choice == R.id.category_all){
+            adapter.swapCursor(getAllItems(db));
+        }
+
+        if( choice == R.id.category_homework){
+            adapter.swapCursor(getItem(db, "Homework"));
+        }
+        if( choice == R.id.category_lab){
+            adapter.swapCursor(getItem(db, "Lab"));
+        }
+        if( choice == R.id.category_lecture){
+            adapter.swapCursor(getItem(db, "Lecture"));
+        }
+        if( choice == R.id.category_exsersise){
+            adapter.swapCursor(getItem(db, "Exsersise"));
+        }
+        return super.onOptionsItemSelected(menu);
+
+    }
+
+
 
 }
