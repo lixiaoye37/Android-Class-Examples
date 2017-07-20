@@ -5,16 +5,16 @@ package com.sargent.mark.todolist.data;
  */
 
 public class ToDoItem {
-    private long id;
     private String description;
     private String dueDate;
     private int done;
     private String category;
 
-    public ToDoItem(long id,String description, String dueDate,int done,String category) {
-        this.id=id;
+    public ToDoItem(String description, String dueDate,int done,String category) {
+
         this.description = description;
         this.dueDate = dueDate;
+        //add two variable in the todoItem class
         this.done=done;
         this.category=category;
 
@@ -25,13 +25,6 @@ public class ToDoItem {
 
     public void setCategory(String category) {
         this.category = category;
-    }
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getDescription() {

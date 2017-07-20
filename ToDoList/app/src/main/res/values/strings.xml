@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ToDoList</string>
+    //the list of spiner
+    <string-array name="choose_categories">
+        <item>Homework</item>
+        <item>Lab</item>
+        <item>Lecture</item>
+        <item>exsersise</item>
+    </string-array>
 </resources>

@@ -6,9 +6,11 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
@@ -23,13 +25,14 @@ public class AddToDoFragment extends DialogFragment{
     private DatePicker dp;
     private Button add;
     private final String TAG = "addtodofragment";
-
+    private Spinner category1;
     public AddToDoFragment() {
     }
 
     //To have a way for the activity to get the data from the dialog
+    //add two prameter in the listener so the active get more information
     public interface OnDialogCloseListener {
-        void closeDialog(int year, int month, int day, String description, int done);
+        void closeDialog(int year, int month, int day, String description, int done,String category);
     }
 
     @Override
@@ -38,6 +41,17 @@ public class AddToDoFragment extends DialogFragment{
         toDo = (EditText) view.findViewById(R.id.toDo);
         dp = (DatePicker) view.findViewById(R.id.datePicker);
         add = (Button) view.findViewById(R.id.add);
+        //create spiner for category
+        category1 = (Spinner) view.findViewById(R.id.category);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.choose_categories, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+
+
+        category1.setAdapter(adapter);
+
 
         final Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
@@ -50,7 +64,7 @@ public class AddToDoFragment extends DialogFragment{
             @Override
             public void onClick(View v) {
                 OnDialogCloseListener activity = (OnDialogCloseListener) getActivity();
-                activity.closeDialog(dp.getYear(), dp.getMonth(), dp.getDayOfMonth(), toDo.getText().toString(),0);
+                activity.closeDialog(dp.getYear(), dp.getMonth(), dp.getDayOfMonth(), toDo.getText().toString(),0,category1.getSelectedItem().toString() );
                 AddToDoFragment.this.dismiss();
             }
         });

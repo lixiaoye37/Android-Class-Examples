@@ -1,104 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="25"
+    api-level="24"
     build-mode="COLD"
-    density="560dpi"
+    density="420dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1500468714368"
-    token="1874177097137257775"
+    timestamp="1500510170807"
+    token="183101486599684209"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="469" />
+        duration="217" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="86" />
+        duration="10" />
     <task
         name="verifier"
-        duration="26" />
+        duration="5" />
 
     <artifact
-        location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\outputs\apk\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1500464025929"
+        timestamp="1500508970144"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1500468714368"
+        timestamp="1500510170807"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

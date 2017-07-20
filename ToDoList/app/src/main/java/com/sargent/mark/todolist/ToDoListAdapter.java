@@ -47,7 +47,7 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
     }
 
     public interface ItemClickListener {
-        void onItemClick(int pos, String description, String duedate,int done, long id);
+        void onItemClick(int pos, String description, String duedate,int done, String category,long id);
     }
 
     public ToDoListAdapter(Cursor cursor, ItemClickListener listener) {
@@ -68,9 +68,11 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
         TextView descr;
         TextView due;
         String duedate;
+        TextView categoryT;
         String description;
-        private CheckBox checkBox;
-        private int done;
+        CheckBox checkBox;
+        int done;
+        String category;
         long id;
 
 
@@ -79,6 +81,9 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             descr = (TextView) view.findViewById(R.id.description);
             due = (TextView) view.findViewById(R.id.dueDate);
             checkBox=(CheckBox) view.findViewById(R.id.checkbox);
+            categoryT = (TextView) view.findViewById(R.id.category1);
+
+
             view.setOnClickListener(this);
         }
 
@@ -90,6 +95,9 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
             duedate = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_DUE_DATE));
             description = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_DESCRIPTION));
             done = cursor.getInt(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_DONE));
+            category = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_CATEGORY));
+
+
             //check if checked
 //            if(done==1){
 //                checkBox.setChecked(true);
@@ -98,13 +106,14 @@ public class  ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemH
 //            }
             descr.setText(description);
             due.setText(duedate);
+            categoryT.setText(category);
             holder.itemView.setTag(id);
         }
 
         @Override
         public void onClick(View v) {
             int pos = getAdapterPosition();
-            listener.onItemClick(pos, description, duedate,done, id);
+            listener.onItemClick(pos, description, duedate,done,category, id);
         }
 //        public void ifDone(View v){
 //            CheckBox checkBox=(CheckBox)v;

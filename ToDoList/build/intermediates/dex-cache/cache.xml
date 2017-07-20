@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="196e56a207736bc521dbd0db6989635e76d5eedf">
+        <dex dex="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cf476f4b4aa1485cbd846d0fb3319eb2fffa453e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ca471b0ab0938fb009f4d33834684bf94343e7a0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="38d183dec37ef53b775b4e6fec92bdb9148e7bcd">
-        <dex dex="C:\Users\Mark\Desktop\New folder\Android-Class-Examples\ToDoList\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_eef6d8683a30ae2380623d761ace4e4a4e2b81a2\classes.dex" />
+        <dex dex="C:\Users\Mark\Desktop\summer2017\4540\Android-Class-Examples\ToDoList\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f0c211804ebf40f4c8c5d708a9da59a8b603c65b\classes.dex" />
     </item>
 
 </items>
